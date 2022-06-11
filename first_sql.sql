@@ -68,6 +68,12 @@ select Student.name,Class.class, Section.section, Student.roll_no, course.course
 from Student,Class,Section,course
 where class_id=Class.id and section_id=Section.id and course_id=course.id AND
       Class.class='XII' And
+      Section.section='B';
+
+select Student.name,Class.class, Section.section, Student.roll_no
+from Student,Class,Section
+where class_id=Class.id and section_id=Section.id AND
+      Class.class='XII' And
       Section.section='B'
 
 
