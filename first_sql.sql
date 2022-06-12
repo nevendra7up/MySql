@@ -37,8 +37,7 @@ create table course(
 );
 
 insert into course(course) values 
-('data science'),
-('data security');
+('data anlayst');
 
 select * from course;
 
@@ -56,7 +55,7 @@ create table Student(
 );
 
 insert into Student(roll_no,name,class_id,section_id,course_id) values
-(26,'Aman',4,2,2);
+(24,'ANAND',4,2,NULL);
 
 select * from Student;
 
@@ -74,7 +73,28 @@ select Student.name,Class.class, Section.section, Student.roll_no
 from Student,Class,Section
 where class_id=Class.id and section_id=Section.id AND
       Class.class='XII' And
-      Section.section='B'
+      Section.section='B';
+
+Select Student.name,Student.roll_no,student.course_id,course.course from Student
+RIGHT JOIN course
+ON Student.course_id=course.id;
+
+
+Select Student.name,Student.roll_no,student.course_id  from student
+LEFT JOIN course
+ON Student.course_id=course.id;
+
+Select Student.name,Student.roll_no,course.id,Student.course_id from student
+INNER JOIN course
+ON Student.course_id=course.id;
+
+select Student.name,Class.class, Section.section, Student.roll_no, course.course
+from (((student 
+LEFT jOIN Class on student.class_id=class.id)
+LEFT JOIN section on student.section_id=section.id)
+RIGHT JOIN course on student.course_id=course.id);
+        
+
 
 
 
