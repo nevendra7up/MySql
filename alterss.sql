@@ -20,8 +20,8 @@ alter table random
 drop primary key;
 
 insert into random(name) values
-('NEVENDRA'),
-('SHIVENDRA');
+('plpi'),
+('werq');
 
 select * from random;
 
@@ -30,8 +30,8 @@ where id=4;
 
 
 UPDATE random
-set name="VICKY"
-where name="SHIVENDRA";
+set name="abcd"
+where name="qwer";
 
 INSERT INTO random (id,date_of_birth) VALUES 
     (1,'2001-03-27'),
@@ -40,7 +40,7 @@ ON DUPLICATE KEY UPDATE
     date_of_birth = VALUES(date_of_birth);
 
 Update random
-set name='ANSHU'
+set name='edfg'
 where id=1;
 
 
